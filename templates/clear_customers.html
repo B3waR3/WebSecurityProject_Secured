@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content">
+    <h2>Delete All Customers</h2>
+    
+    <div class="warning-box">
+        <p><strong>Warning:</strong> You are about to delete ALL of your customers. This action cannot be undone.</p>
+    </div>
+    
+    <div class="action-buttons">
+        <form action="{{ url_for('clear_customers') }}" method="post">
+            <button type="submit" class="danger-button">Yes, Delete All Customers</button>
+        </form>
+        <a href="{{ url_for('customers') }}" class="button">Cancel</a>
+    </div>
+</div>
+{% endblock %} 
